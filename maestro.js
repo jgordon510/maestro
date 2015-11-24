@@ -977,13 +977,29 @@ States.ShowAnswers.prototype = {
                 
                 game.messagePanel.destroy
                 game.messagePanel = game.add.group()
+                
+                //semi-opaque background
+                var panelBack = game.add.sprite(0,0,'answerBack')
+                panelBack.scale.setTo(9,7);
+                game.messagePanel.add(panelBack);
+                
                 //build panel
                 var boxGraphic = game.add.graphics(25, 300);
-                boxGraphic.beginFill(0x555555);
+                boxGraphic.beginFill(0x111111);
                 boxGraphic.lineStyle(0, 0x000000, 1);
                 boxGraphic.drawRect(0, 0, 750, 50);
                 boxGraphic.endFill();
                 game.messagePanel.add(boxGraphic)
+                
+                //instructions
+                var instructions = game.add.text(400,363,'Press ENTER to submit, ESC to cancel...')
+                instructions.anchor.setTo(0.5,0.5);
+                instructions.font = 'Arial';
+                instructions.fontSize = 18;
+                instructions.fill = '#000000';
+                instructions.align = 'center';
+                game.messagePanel.add(instructions)
+                
                 
                 //add a game.messageLabel
                 game.messageLabel = game.add.text(40,330,'')
@@ -1232,6 +1248,7 @@ States.ShowQuestion.prototype = {
     this.load.image('difficultySlider','assets/difficultySlider.png'); 
     this.load.image('questionScale','assets/questionScale.png'); 
     this.load.image('questionSlider','assets/questionSlider.png'); 
+    this.load.image('answerBack','assets/answerBack.png'); 
     
     }, 
 
@@ -1323,13 +1340,28 @@ States.ShowQuestion.prototype = {
                 });
                 game.messagePanel.destroy
                 game.messagePanel = game.add.group()
+                //semi-opaque background
+                var panelBack = game.add.sprite(0,0,'answerBack')
+                panelBack.scale.setTo(9,7);
+                game.messagePanel.add(panelBack);
+                
                 //build panel
                 var boxGraphic = game.add.graphics(25, 300);
-                boxGraphic.beginFill(0x555555);
+                boxGraphic.beginFill(0x111111);
                 boxGraphic.lineStyle(0, 0x000000, 1);
                 boxGraphic.drawRect(0, 0, 750, 50);
                 boxGraphic.endFill();
                 game.messagePanel.add(boxGraphic)
+                
+                //instructions
+                var instructions = game.add.text(400,363,'Press ENTER to submit, ESC to cancel...')
+                instructions.anchor.setTo(0.5,0.5);
+                instructions.font = 'Arial';
+                instructions.fontSize = 18;
+                instructions.fill = '#000000';
+                instructions.align = 'center';
+                game.messagePanel.add(instructions)
+                
                 
                 //add a game.messageLabel
                 game.messageLabel = game.add.text(40,330,'')
