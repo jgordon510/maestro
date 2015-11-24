@@ -1,5 +1,6 @@
 # Maestro
-A real-time classroom communication tool
+A real-time classroom communication tool.
+
 Maestro is online at: https://maestroclass.firebaseapp.com/
 
 #Introduction
