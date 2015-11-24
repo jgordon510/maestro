@@ -23,6 +23,8 @@ You’ll see a grid of empty boxes.  As your students submit answers, the boxes 
 You can click on a student’s box to get enlarged detail.  In the detail information, you can click the comment button to send the student a comment on their answer. Type your comment and press enter to send, escape to cancel.
 Student
 
+#Student
+
 A student logs in with their Google Apps for Education account.  Once logged in, they should wait for the #classtag that you provide.  The student software will wait until you’ve posted a question, and then display the question.  Students can click on the question parts to answer.  They can also add comments to their answer, before clicking the broadcast button.
 
 Once they’ve broadcast their answer to you, their software will wait until you’ve posted the next question.
